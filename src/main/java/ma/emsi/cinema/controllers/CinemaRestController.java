@@ -9,11 +9,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
 
@@ -24,6 +20,7 @@ import ma.emsi.cinema.entities.Film;
 import ma.emsi.cinema.entities.Ticket;
 
 @RestController
+@CrossOrigin("*")
 public class CinemaRestController {
     @Autowired
     private FilmRepository filmRepository;
